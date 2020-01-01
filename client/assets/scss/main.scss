@@ -2,3 +2,17 @@
 #root {
     height:100vh;
 }
+div{
+    border-color:red;
+    border-width:1px;
+    border-style:solid;
+    &>div{
+        border-color:green;
+        &>div{
+            border-color:blue;
+            &>div{
+                border-color:pink;
+            }
+        }
+    }
+}

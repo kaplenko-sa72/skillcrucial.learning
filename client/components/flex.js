@@ -13,13 +13,45 @@ const Flex = () => {
       width: '100%',
       height: '100vh',
       justifyContent: 'space-between',
-      flexDirection: 'column' // flex-direction
+      alignItems: 'center',
+      flexDirection: 'row' // flex-direction
     }}
     >
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div style={{
+        display: 'flex',
+        height: '100vh',
+        minWidth: '100px',
+        flexDirection: 'column' // flex-direction
+      }}
+      >
+        <div> row 1 </div>
+        <div> row 2</div>
+      </div>
+      <div style={{
+        display: 'flex',
+        height: '100vh',
+        minWidth: '600px',
+        flexGrow: 1,
+        justifyContent: 'space-between',
+        flexDirection: 'column' // flex-direction
+      }}
+      >
+        <div> Header </div>
+        <div> Tweet Stream </div>
+      </div>
+      <div style={{
+        height: 'fit-content',
+        display: 'flex',
+        minWidth: '100px',
+      }}
+      >
+        3
+        <br />
+        3
+        <br />
+        3
 
+      </div>
     </div>
   )
 }

@@ -13,6 +13,7 @@ const Dummy = () => {
     text1: true,
     text2: false
   })
+  const [textLog, setTextlog] = useState('')
   const [text, setText] = useState('')
   const [clickLog, clickLogChange] = useState('')
   const [clickLog2, clickLog2Change] = useState('')
@@ -26,8 +27,12 @@ const Dummy = () => {
       text2: !showText.text2
     })
   }
-  const changeTextBox = (e) => {
-    setText(e.target.value)
+  const changeTextBox1 = (e1) => {
+    setTextlog(e1.target.value)
+    sessionStorage.setItem('login', textLog)
+  }
+  const changeTextBox2 = (e2) => {
+    setText(e2.target.value)
     sessionStorage.setItem('password', text)
   }
   return (
@@ -64,11 +69,11 @@ const Dummy = () => {
       <br />
       Enter your login
       <br />
-      <input type="text" onChange={changeTextBox} />
+      <input type="text" onChange={changeTextBox1} />
       <br />
       !!!!!password!!!!
       <br />
-      <input type="password" onChange={changeTextBox} />
+      <input type="password" onChange={changeTextBox2} />
       <br />
 
       {
